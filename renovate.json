@@ -1,14 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranches": ["/^v.*/"],
   "useBaseBranchConfig": "merge",
   "rebaseWhen": "conflicted",
   "assignees": ["mpatrickb"],
   "prConcurrentLimit": 3,
   "prHourlyLimit": 2,
-  "schedule": [
-    "after 2am and before 3am on saturday"
-  ],
   "extends": [
     "config:recommended"
   ],
