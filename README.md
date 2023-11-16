@@ -1,3 +1,9 @@
+"baseBranches": ["/^v.*/"],
+"schedule": [
+    "after 2am and before 3am on saturday"
+  ],
+
+
 # Renovate - Hands On Tutorial
 
 ## Introduction
