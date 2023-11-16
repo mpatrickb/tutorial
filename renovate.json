@@ -1,15 +1,42 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "baseBranches": ["/^v.*/"],
+  "useBaseBranchConfig": "merge",
+  "rebaseWhen": "conflicted",
+  "assignees": ["mpatrickb"],
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2,
+  "schedule": [
+    "after 2am and before 3am on saturday"
+  ],
   "extends": [
     "config:recommended"
   ],
   "constraints": {
     "php": "8.1"
   },
+  "ignorePaths": [
+     "**/node_modules/**",
+     "**/bower_components/**",
+     "**/vendor/**",
+     "**/examples/**",
+     "**/__tests__/**",
+     "**/test/**",
+     "**/tests/**",
+     "**/__fixtures__/**",
+     "**/requirements.txt",
+     "requirements.txt",
+     "docker-compose.yml",
+    "package.json"
+   ],
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
       "dependencyDashboardApproval": true
+    },
+    {
+  		"matchPackagePatterns": ["^laravel/"],
+  		"groupName": "laravel",
     }
   ]
 }
