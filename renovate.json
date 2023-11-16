@@ -31,8 +31,8 @@
       "dependencyDashboardApproval": true
     },
     {
-  		"matchPackagePatterns": ["^laravel/"],
-  		"groupName": "laravel",
+      "matchPackagePatterns": ["^laravel/"],
+      "groupName": "laravel",
     }
   ]
 }
